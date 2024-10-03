@@ -52,29 +52,48 @@ public class Tabeller {
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		for (int i = 0; i < tabell.length; i++) {
+			if (tabell [i] == tall) {
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	// f)
 	public static int[] reverser(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
+		int [] nyTabell = new int [tabell.length];
+		for (int i = 0; i < tabell.length; i++) {
+			nyTabell [i] = tabell [tabell.length - 1 - i];
+		}
+		return nyTabell;
 	}
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		for (int i = 1; i < tabell.length; i++) {
+			if (tabell [i] < tabell[i - 1]) {
+				return false;
+				
+			}
+			
+		}
+		return true;
 	}
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
+		int nyTabell [] = new int [tabell1.length + tabell2.length];
+		for (int i = 0; i < tabell1.length; i++ ) {
+			nyTabell[i] = tabell1[i];
+		}
+		for (int j = 0; j < tabell2.length; j++) {
+			nyTabell[tabell1.length + j] = tabell2[j];
+		}
+		return nyTabell;
 
 	}
 }
